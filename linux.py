@@ -26,18 +26,18 @@ for line in lines:
     name = line[0]
     email = line[2]
 
-    #5- Extrai o username atravéz do email, removendo o "@gmail.com" do final
+    #7- Extrai o username atravéz do email, removendo o "@gmail.com" do final
     username = email.replace("@gmail.com", "")
 
-    #6- Condição para verificar se o usuário existe ou não para fazer a criação do mesmo no linux
+    #8- Condição para verificar se o usuário existe ou não para fazer a criação do mesmo no linux
     if username in usernames:
         print('Usuário já existe:', username)
         print("")    
     else:
-        #7- Gera um senha aleatória e agrupa a lista da senha em uma string só ("".join agrupa a lista que o random devolve em uma string)        
+        #9- Gera um senha aleatória e agrupa a lista da senha em uma string só ("".join agrupa a lista que o random devolve em uma string)        
         password = "".join(random.sample(characters, password_length))
 
-        #8- Roda um comando no linux para a criação de usuário já setando uma senha aleatória gerada anteriormente
+        #10- Roda um comando no linux para a criação de usuário já setando uma senha aleatória gerada anteriormente
         subprocess.run(['sudo', 'useradd', username, '-p', password])
         print("Usuário:", username)
         print("Senha:", password)
