@@ -32,7 +32,7 @@ for line in lines:
     #7- Extrai o username atravéz do email, removendo o "@gmail.com" do final
     username = email.replace("@gmail.com", "")
 
-    #8- Condição para verificar se o usuário existe ou não para fazer a criação do mesmo no linux
+    #8- Condição para verificar se o usuário existe ou não para fazer a criação do mesmo no Windows
     if username in usernames:
         print('Usuário já existe:', username)
         print("")    
